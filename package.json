@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest -u",
+    "test": "vitest -u md-to-vue",
     "dev:example": "vite dev example",
     "build:example": "vite build example",
     "preview:example": "vite preview example"
