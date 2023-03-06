@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-vitepress",
+  "name": "@yojs/vite-plugin-vitepress",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -35,6 +35,9 @@
     "dist"
   ],
   "author": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
   "devDependencies": {
     "@mistjs/eslint-config-vue": "^0.0.3",
