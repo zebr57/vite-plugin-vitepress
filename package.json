@@ -2,7 +2,21 @@
   "name": "vite-plugin-vitepress",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.js",
+  "exports": {
+    ".": {
+      "require": "./dist.index.js",
+      "import": "./dist.index.mjs"
+    },
+    "./theme": {
+      "require": "./dsit/theme.js",
+      "import": "./dist/theme.mjs"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
   "scripts": {
     "test": "vitest -u md-to-vue",
     "build": "tsup",
@@ -10,7 +24,14 @@
     "build:example": "vite build example",
     "preview:example": "vite preview example"
   },
-  "keywords": [],
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "vitepress"
+  ],
+  "files": [
+    "dist"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
