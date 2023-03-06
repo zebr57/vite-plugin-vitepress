@@ -11,13 +11,13 @@ export class Parser {
   public md: MarkdownRenderer | undefined
   constructor(public readonly config: ResolvedConfig, public readonly options:UserOptions) {}
 
-  //
+  // 创建md
   public async setupRender() {
     const srcDir = this.config.root ?? process.cwd() // 相对路径
     const base = this.config.base ?? '/'  // 基础路径
     this.md = await createMarkdownRenderer(srcDir, this.options.markdown, base)
   }
-  //
+  // 转化
   public async transform(code: string, id: string) {
     if(id.endsWith('.md')) {
       return await mdToVue(this, code, id)

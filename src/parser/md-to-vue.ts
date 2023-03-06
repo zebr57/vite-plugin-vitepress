@@ -20,7 +20,7 @@ export const mdToVue = (
 
   const { sfcBlocks } = env
   const vue = [
-    `<template>${html}</template>`,
+    `<template><div class="vp-doc">${html}</div></template>`,
     sfcBlocks?.scriptSetup?.content ?? '',
     ...(sfcBlocks?.styles.map((v) => v.content) ?? [])
   ].join('\n')
