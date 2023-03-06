@@ -22,7 +22,8 @@
     "build": "tsup",
     "dev:example": "vite dev example",
     "build:example": "vite build example",
-    "preview:example": "vite preview example"
+    "preview:example": "vite preview example",
+    "release": "bumpp"
   },
   "keywords": [
     "vite",
@@ -54,5 +55,8 @@
         "@algolia/client-search"
       ]
     }
+  },
+  "dependencies": {
+    "bumpp": "^9.0.0"
   }
 }
