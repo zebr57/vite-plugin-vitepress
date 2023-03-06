@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest -u md-to-vue",
+    "build": "tsup",
     "dev:example": "vite dev example",
     "build:example": "vite build example",
     "preview:example": "vite preview example"
